@@ -1,0 +1,8 @@
+q
+quti
+> 
+exit
+console
+run
+run junction://chat.us.freenode.net:6667/testsession#irc 1 1
+exit
