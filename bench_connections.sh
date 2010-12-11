@@ -1,5 +1,12 @@
 SERVER=192.168.2.11
 
+
+for i in 1
+do
+    echo "Running test with message size $i"
+    sbt "run junction://sb.openjunction.org/testsession#xmpp 100 ${i} data/result_xmpp_remote_connections_${1}.out"
+done
+
 #for i in 1
 #do
 #    echo "Running test with message size $i"
@@ -18,9 +25,9 @@ SERVER=192.168.2.11
 #    sbt "run junction://${SERVER}/testsession#jx 100 ${i} data/result_jx_connections_${1}.out"
 #done
 
-for i in 1
-do
-    echo "Running test with message size $i"
-    sbt "run junction://192.168.2.15/testsession#jx 100 ${i} data/result_jx_mobile_connections_${1}.out"
-done
+#for i in 1
+#do
+#    echo "Running test with message size $i"
+#    sbt "run junction://192.168.2.15/testsession#jx 100 ${i} data/result_jx_mobile_connections_${1}.out"
+#done
 
